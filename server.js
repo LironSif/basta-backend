@@ -5,9 +5,16 @@ import usersRoutes from "./routes/userRoutes.js";
 import itemRoutes from "./routes/itemRoutes.js";
 import { errorHandler } from "./middlewares/errorMiddleware.js";
 import connectDB from "./config/db.js";
+import multer from 'multer';
+import fs from 'fs/promises';
+import audioRoutes from './routes/audioRoutes.js';
+import generateTextRoutes from './routes/generateTextRoutes.js';
+
+
 dotenv.config();
 
 const app = express();
+const upload = multer({ dest: 'uploads/' });
 
 app.use(cors());
 // app.use(cors({
@@ -20,6 +27,12 @@ app.use("/api/v1/users", usersRoutes);
 
 // Item routes
 app.use("/api/v1/items", itemRoutes);
+
+// Audio processing route
+app.use("/api/v1/audio", audioRoutes);
+
+// Text generation route
+// app.use("/api/v1/generate-text", genrateTextRoutes);
 
 app.use(errorHandler); // Error handler middleware
 
