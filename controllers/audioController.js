@@ -78,8 +78,21 @@ const promptOpenAi = async (prompt)=> {
         console.log(prompt);
         const systemMessage = {
             role: "system",
-            content: `You are a helpful assistant. Your task is to organize provided information about a basta (market stand) into a specific format. The format should be: "basta name: [name], items: [{item: [item name], price: [price], unit: [unit]}]".`,
+            content: `You are a helpful assistant. Your task is to organize provided information about a basta (market stand) into a specific format and ensure the basta name always includes 'basta' not 'pasta'. Each item should also have a placeholder URL for an image. The format should be: 
+            {
+              "basta name": "[basta name]",
+              "items": [
+                {
+                  "item": "[item name]",
+                  "price": "[price] ILS",
+                  "unit": "[unit]",
+                  "image": "URL placeholder for [item name]"
+                },
+                ...
+              ]
+            }.`,
         };
+        
         
             const response = await openai.chat.completions.create({
               model: "gpt-3.5-turbo",
@@ -88,6 +101,11 @@ const promptOpenAi = async (prompt)=> {
                   { role: "user", content: prompt },
               ],
               max_tokens: 250,
+              // temperature: 1,
+              // stop: ":",
+              // presence_penalty: 2,
+              // seed: 42,
+              // n: 2,
             });
             const assistantResponse = response.choices[0].message;
         console.log("##########################################",assistantResponse.content);
