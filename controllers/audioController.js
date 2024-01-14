@@ -8,8 +8,9 @@ export const processAudio = async (req, res) => {
     }
 
     try {
-        const convertedFilePath = await convertToWav(req.file.path);
-        const buffer = await fs.readFile(convertedFilePath);
+        // const convertedFilePath = await convertToWav(req.file.path);
+        // const buffer = await fs.readFile(convertedFilePath);
+        const buffer = req.file;
         const openai = getOpenAiInstance();
 
         const response = req.body.translate === "true"
