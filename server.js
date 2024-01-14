@@ -31,8 +31,6 @@ app.use("/api/v1/items", itemRoutes);
 // Audio processing route
 app.use("/api/v1/audio", audioRoutes);
 
-// Text generation route
-// app.use("/api/v1/generate-text", genrateTextRoutes);
 
 app.use(errorHandler); // Error handler middleware
 
