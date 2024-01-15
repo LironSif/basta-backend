@@ -12,7 +12,7 @@ The backend project, named Basta Marketplace, is designed to facilitate the crea
 
 - [Liron Sifado (Team Lead)](https://github.com/LironSif)
 - [May Karam](https://github.com/mayoush89k)
-- [Mustafa Kaddan]()
+- [Mustafa Kaddan](https://github.com/Mufasa167)
 - [Simon Asmar](https://github.com/Simon1Asmar)
 
 ## Table of Contents
