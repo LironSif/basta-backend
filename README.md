@@ -4,6 +4,17 @@ Base Url [https://basta-2zr3.onrender.com/](https://basta-2zr3.onrender.com/)
 
 The backend project, named Basta Marketplace, is designed to facilitate the creation and management of individual booths (referred to as "Bastas") for sellers. It employs OpenAI's Speech-to-Text (STT) technology, allowing sellers to verbally provide information such as booth names, product names, and prices during the setup process. Geolocation features enable sellers to specify the physical location of their booths. The platform processes the spoken data using OpenAI's STT, transforming it into structured information. This structured data is then used to dynamically generate visually appealing display pages for each Basta. The system aims to streamline the setup and maintenance of booths, enhancing the experience for both sellers and customers in an innovative and tech-driven marketplace.
 
+### Front End
+- GitHub: [basta-frontend](https://github.com/LironSif/basta-frontend/)
+- Netlify: [https://bastaproject.netlify.app/](https://bastaproject.netlify.app/)
+
+## Team Members
+
+- [Liron Sifado (Team Lead)](https://github.com/LironSif)
+- [May Karam](https://github.com/mayoush89k)
+- [Mustafa Kaddan]()
+- [Simon Asmar](https://github.com/Simon1Asmar)
+
 ## Table of Contents
 
 - [Installation](#installation)
