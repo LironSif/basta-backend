@@ -8,7 +8,7 @@ import connectDB from "./config/db.js";
 import multer from 'multer';
 import fs from 'fs/promises';
 import audioRoutes from './routes/audioRoutes.js';
-import generateTextRoutes from './routes/generateTextRoutes.js';
+
 
 
 dotenv.config();
